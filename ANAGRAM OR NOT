@@ -1,0 +1,49 @@
+/*  2 string and print both are ANAGRAM or NOT ANAGRAM */  
+/* ANAGRAM means the two words are made up with same alphabets */
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+	char str1[100],str2[100];
+	puts("enter 1st string:");
+	gets(str1);
+	puts("enter 2st string:");
+	gets(str2);
+	int n1=strlen(str1),n2=strlen(str2);
+	int i,j;
+	if(n1 == n2)
+	{
+		for(i=0;i<n1-1;i++)
+		{
+			for(j=0;j<n1-i-1;j++)
+			{
+				if(str1[j]>str1[j+1])
+				{
+					char temp=str1[j];
+					str1[j]=str1[j+1];
+					str1[j+1]=temp;
+				}		
+				if(str2[j]>str2[j+1])
+				{
+					char temp=str2[j];
+					str2[j]=str2[j+1];
+					str2[j+1]=temp;
+				}
+			}
+		}
+		if(str1[0]==str2[0])
+			printf(" ANAGRAM");	
+		else
+		printf("NOT A ANAGRAM");
+	}
+	else
+		printf("NOT A ANAGRAM");
+
+}
+-------------------------------------------------
+OUTPUT:-
+enter 1st string:
+TEN
+enter 2st string:
+NET
+ANAGRAM
