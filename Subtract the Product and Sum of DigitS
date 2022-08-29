@@ -1,0 +1,20 @@
+/* C Program Subtract the Product and Sum of Digits of an Integer */
+#include<stdio.h>
+void main()
+{
+  int num,rem,sum=0,multi=1;
+  printf("enter a number:");
+  scanf("%d",&num);
+    while(num>0)
+        {
+            rem=num%10;
+            sum=sum+rem;  
+            multi=multi*rem;
+            num/=10;
+        }
+    printf("%d",(multi-sum));
+}
+-------------------------------------------
+OUTPUT:-
+        enter a number:12345  //((1*2*3*4*5)-(1+2+3+4+5))  
+        105
