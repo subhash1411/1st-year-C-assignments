@@ -1,0 +1,22 @@
+/* C Program to find FACTORIAL of a number using functions with return value */
+#include<stdio.h>
+void main()
+{
+	int num;
+	printf("Enter a number:");
+	scanf("%d",&num);
+	printf("Given number [%d] is : %d",num,FACT(num));
+}
+int FACT(int n)
+{
+	int f=1;
+	while(n>0)
+	{
+		f*=n;
+		n--;
+	}
+}
+-------------------------------
+OUTPUT :-
+Enter a number:6
+Given number [6] is : 720
