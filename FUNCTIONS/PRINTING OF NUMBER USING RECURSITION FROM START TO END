@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+	int n,m;
+	printf("Enter starting number:");
+	scanf("%d",&n);
+	printf("Enter ending number:");
+	scanf("%d",&m);
+	printf("Numbers in between:");
+	fun(n,m);
+}
+int fun(int n,int m)
+{
+	if(n>m)
+		return;
+	else
+	{
+		printf("%d   ",n);
+		n++;
+		fun(n,m);
+	}	
+}
