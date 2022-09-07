@@ -1,0 +1,32 @@
+/* Read a number n, if the number is in fibonacci series print "Yes" otherwise "No" */
+#include<stdio.h>
+int main()
+{
+	int n,a[100],i,t=3,count=0;
+	printf("Enter n value:");
+	scanf("%d",&n);
+	a[0]=0,a[1]=1;
+	for(i=2;i<t;i++)
+	{
+		if(a[i-1]+a[i-2]>n)
+			break;
+		a[i]=a[i-1]+a[i-2];
+		t++;
+	}
+	for(i=t-1;i>=0;i--)
+	{
+		if(a[i]==n)
+		{
+			count++;
+			break;
+		}
+	}
+	if(count==1)
+		printf("Given number is fibonacci number");
+	else
+	printf("Given number is not a fibonacci number");
+}
+---------------------------------
+OUTPUT:-
+Enter n value : 13
+Given number is fibonacci number
